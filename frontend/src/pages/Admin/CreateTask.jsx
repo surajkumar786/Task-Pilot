@@ -10,7 +10,7 @@ import {LuTrash2} from "react-icons/lu"
 import SelectDropdown from '../../components/inputs/SelectDropdown'
 import SelectUsers from '../../components/inputs/SelectUsers'
 import TodoListInput from '../../components/inputs/TodoListInput'
-import AddAttachmentsInput from '../../components/inputs/addAttachmentsInput'
+import AddAttachmentsInput from '../../components/inputs/AddAttachmentsInput'
 import DeleteAlert from '../../components/DeleteAlert'
 import Modal from '../../components/Modal'
 
