@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+:root{
+--font-display: "poppins","sans-serif";
+--breakpoint-3xl:1920px;
+--color-primary:#1368ec;
+}
+
+@layer base {
+  html{
+    font-family: var(--font-display);
+  }
+
+  body{
+    background-color: #fcfbfc;
+    overflow-x: hidden;
+  }
+
+  
+}
+
+/* @layer components {
+  .input-box {
+    @apply w-full flex justify-between gap-3 text-sm text-black bg-slate-100/50 rounded px-4 mt-3 border border-slate-200 outline-none;
+  }
+} */
+
+.card{
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgb(209 213 219 / 0.1), 0 1px 2px 0 rgb(209 213 219 / 0.06);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.card-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151; /* text-gray-700 */
+  background-color: #f9fafb; /* bg-gray-50 */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(229, 231, 235, 0.5); /* border-gray-200/50 */
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+.card-btn:hover {
+  color: #3b82f6; /* text-blue-500 */
+  background-color: #eff6ff; /* bg-blue-50 */
+}
+
+.card-btn-fill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;              /* gap-3 */
+  font-size: 12px;           /* text-[12px] */
+  font-weight: 500;          /* font-medium */
+  color: #fff;               /* text-white */
+  background-color: #3b82f6; /* bg-primary (assuming Tailwind's blue-500) */
+  padding: 0.375rem 1rem;    /* py-1.5 px-4 */
+  border-radius: 0.5rem;     /* rounded-lg */
+  border: 1px solid #3b82f6; /* border-primary */
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.card-btn-fill:hover {
+  color: #3b82f6;            /* hover:text-primary */
+  background-color: #eff6ff; /* hover:bg-blue-50 */
+}
+
+
+.form-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 #f3f4f6, 0 1px 2px 0 #f3f4f6; /* shadow-md shadow-gray-100 */
+  border: 1px solid rgba(229, 231, 235, 0.5); /* border-gray-200/50 */
+}
+
+.form-input {
+  width: 100%;
+  font-size: 0.875rem; /* text-sm */
+  color: #000;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #f1f5f9; /* border-slate-100 */
+  padding: 0.75rem 0.625rem; /* py-3 px-2.5 */
+  border-radius: 0.375rem; /* rounded-md */
+  margin-top: 0.5rem; /* mt-2 */
+}
+
+.form-input::placeholder {
+  color: #6b7280; /* text-gray-500 */
+}
+
+.add-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;           /* gap-1.5 */
+  font-size: 0.75rem;      /* text-xs */
+  /* For md:text-sm, you can use a media query if needed */
+  font-weight: 500;        /* font-medium */
+  color: #3b82f6;          /* text-blue-500 */
+  white-space: nowrap;     /* whitespace-nowrap */
+  background-color: #eff6ff; /* bg-blue-50 */
+  border: 1px solid #bfdbfe; /* border-blue-100 */
+  border-radius: 0.5rem;   /* rounded-lg */
+  padding: 0.5rem 1rem;    /* py-2 px-4 */
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;                /* gap-3 */
+  font-size: 0.75rem;          /* text-xs */
+  color: #365314;              /* text-lime-900 */
+  background-color: #f7fee7;   /* bg-lime-100 */
+  padding: 0.5rem 0.5rem;      /* py-2 px-2 */
+  border-radius: 0.25rem;      /* rounded */
+  border: 1px solid #d9f99d;   /* border-lime-200 */
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+/* Responsive font size and padding for md screens */
+@media (min-width: 768px) {
+  .download-btn {
+    font-size: 13px;           /* md:text-[13px] */
+    padding-left: 0.75rem;     /* md:px-3 */
+    padding-right: 0.75rem;
+  }
+}
+
+.download-btn:hover {
+  border-color: #bef264;       /* hover:border-lime-400 */
+}
+
+.user-card{
+  @apply bg-white p-4 rounded-xl shadow-md shadow-gray-100 border border-gray-200/50;
+}
