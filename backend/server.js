@@ -12,6 +12,10 @@ const reportRoutes = require("./routes/reportRoutes");
 
 const app = express();
 
+app.get("/",(req,res) => {
+  res.json("Hello");
+})
+
 //middleware to handle CORS
 app.use(
   cors({
